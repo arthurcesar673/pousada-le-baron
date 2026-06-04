@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pousada Le Baron</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:Inter;
+background:#061826;
+color:#fff;
+}
+
+.hero{
+height:100vh;
+background:url('piscina-1.jpeg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,20,40,0.6);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+padding:20px;
+}
+
+h1{
+font-family:Playfair Display;
+font-size:60px;
+color:#a6ddff;
+}
+
+.subtitle{
+font-size:18px;
+color:#d0ecff;
+margin-top:10px;
+}
+
+.btn{
+padding:12px 18px;
+margin:5px;
+border-radius:8px;
+text-decoration:none;
+display:inline-block;
+font-weight:bold;
+}
+
+.whatsapp{background:#25D366;color:#fff;}
+.insta{background:#E1306C;color:#fff;}
+.reserve{background:#00a6d6;color:#fff;}
+
+.lang{
+position:fixed;
+top:20px;
+right:20px;
+z-index:999;
+}
+
+select{
+padding:8px;
+border-radius:8px;
+border:none;
+}
+
+section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+font-family:Playfair Display;
+color:#7fd3ff;
+margin-bottom:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:10px;
+}
+
+.grid img{
+width:100%;
+border-radius:10px;
+transition:0.3s;
+}
+
+.grid img:hover{
+transform:scale(1.04);
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#04121f;
+color:#88b7d6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LANG -->
+<div class="lang">
+<select onchange="changeLang(this.value)">
+<option value="pt">PT</option>
+<option value="en">EN</option>
+<option value="es">ES</option>
+</select>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+<h1 id="title">Pousada Le Baron</h1>
+<p class="subtitle" id="subtitle">Seu refúgio na Praia do Francês</p>
+
+<a class="btn reserve" href="#reserve" id="btn1">Reservar</a>
+<a class="btn whatsapp" href="https://wa.me/5582999282006" id="btn2">WhatsApp</a>
+<a class="btn insta" href="https://www.instagram.com/pousada_lebaron/" id="btn3">Instagram</a>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section>
+<h2 id="h2_about">Bem-vindo</h2>
+<p id="about_text" style="text-align:center;">
+A Pousada Le Baron oferece conforto e tranquilidade na Praia do Francês.
+</p>
+</section>
+
+<!-- REVIEWS -->
+<section>
+<h2 id="h2_reviews">Avaliações</h2>
+<p style="text-align:center;font-size:40px;color:#00d4ff;">9.0</p>
+
+<p id="review1" style="text-align:center;">Excelente pousada</p>
+<p id="review2" style="text-align:center;">Atendimento impecável</p>
+<p id="review3" style="text-align:center;">Localização perfeita</p>
+</section>
+
+<!-- QUARTOS STANDARD -->
+<section>
+<h2 id="h2_std">Quartos Standard</h2>
+<div class="grid">
+<img src="quarto-standard-1.jpeg">
+<img src="quarto-standard-2.jpeg">
+<img src="quarto-standard-3.jpeg">
+</div>
+</section>
+
+<!-- SUPERIOR -->
+<section>
+<h2 id="h2_sup">Quartos Superior</h2>
+<div class="grid">
+<img src="quarto-superior-1.jpeg">
+<img src="quarto-superior-2.jpeg">
+<img src="quarto-superior-3.jpeg">
+<img src="quarto-superior-4.jpeg">
+</div>
+</section>
+
+<!-- PISCINA -->
+<section>
+<h2 id="h2_pool">Piscina / Pool / Piscina</h2>
+<div class="grid">
+<img src="piscina-1.jpeg">
+<img src="piscina-2.jpeg">
+<img src="piscina-3.jpeg">
+</div>
+</section>
+
+<!-- ÁREAS COMUNS (CORRIGIDO COM ACENTO COMO VOCÊ PEDIU) -->
+<section>
+<h2 id="h2_area">Áreas Comuns</h2>
+<div class="grid">
+<img src="área-comum-1.jpeg">
+<img src="área-comum-2.jpeg">
+<img src="área-comum-3.jpeg">
+<img src="área-comum-4.jpeg">
+<img src="área-comum-5.jpeg">
+<img src="área-comum-6.jpeg">
+<img src="área-comum-7.jpeg">
+<img src="área-comum-8.jpeg">
+<img src="área-comum-9.jpeg">
+</div>
+</section>
+
+<!-- RESERVA -->
+<section id="reserve">
+<h2 id="h2_reserve">Reserva</h2>
+<div style="text-align:center;">
+<a class="btn whatsapp" href="https://wa.me/5582999282006">Reservar agora</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+Pousada Le Baron • Praia do Francês • CNPJ 10.930.667/0001-47
+</footer>
+
+<script>
+function changeLang(lang){
+
+// INGLÊS
+if(lang==="en"){
+document.getElementById("title").innerText="Le Baron Inn";
+document.getElementById("subtitle").innerText="Your refuge in Praia do Francês";
+document.getElementById("h2_about").innerText="Welcome";
+document.getElementById("about_text").innerText="Comfort and tranquility in a beautiful beach location.";
+document.getElementById("h2_reviews").innerText="Reviews";
+document.getElementById("h2_std").innerText="Standard Rooms";
+document.getElementById("h2_sup").innerText="Superior Rooms";
+document.getElementById("h2_area").innerText="Common Areas";
+document.getElementById("h2_reserve").innerText="Booking";
+}
+
+// ESPANHOL
+if(lang==="es"){
+document.getElementById("title").innerText="Posada Le Baron";
+document.getElementById("subtitle").innerText="Tu refugio en Praia do Francês";
+document.getElementById("h2_about").innerText="Bienvenido";
+document.getElementById("about_text").innerText="Comodidad y tranquilidad en la playa.";
+document.getElementById("h2_reviews").innerText="Reseñas";
+document.getElementById("h2_std").innerText="Habitaciones Estándar";
+document.getElementById("h2_sup").innerText="Habitaciones Superior";
+document.getElementById("h2_area").innerText="Áreas Comunes";
+document.getElementById("h2_reserve").innerText="Reserva";
+}
+
+// PT
+if(lang==="pt"){
+location.reload();
+}
+}
+</script>
+
+</body>
+</html>
